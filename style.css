@@ -10,12 +10,29 @@
         font-family: 'Merriweather', serif;
         transition: 0.2s  ease-in-out;
     }
-    
+    .services,
+    .advantage,
+    #footer,
+    .ourteam-main,
+    .main-family,
+    .criminal,
+    .adminlow,
+    .main-civil {
+        position: relative;
+        top: 100px;
+    }
     * a {
         text-decoration: none;
         color: white;
     }
     .navbar {
+        position: fixed;
+        top: 1px;
+        right: 15px;
+        left: 15px;
+        overflow: hidden;
+        z-index: 2;
+        width: auto;
         padding-left: 10px;
         padding-right: 10px;
         padding-bottom: 0px;
@@ -51,7 +68,11 @@
     .nav-item:hover {
         border-bottom: 2px solid white;
     }
-    
+    .main {
+        position: relative;
+        top: 95px;
+        z-index: 1;
+    }
     .main-wrap {
         background-color: rgba(255, 255, 255, 0.925);
         font-family: 'Merriweather', serif;
@@ -66,7 +87,12 @@
     .main-title h1 {
         font-weight: bold;
     }
-    
+    .info-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
     .info-text {
         font-family: 'Merriweather', serif;
         font-size: 1.1rem;
@@ -87,9 +113,9 @@
         font-weight: 700;
     }
     .foto {
-        width: 300px;
-        height: 430px;
-        float:left; /* Выравнивание по левому краю */
+        
+        height: 350px;
+       /*  float:left; */ /* Выравнивание по левому краю */
         margin: 23px 23px 14px 19px; /* Отступы вокруг картинки */
     }
     .feedback {
@@ -149,6 +175,7 @@
             transform: translatex(10px);
         }
     }    
+   
     .services {
         font-family: 'Merriweather', serif;
        background-color: rgb(249 246 246 / 93%);
@@ -339,11 +366,7 @@
         justify-content: space-between;
         flex-wrap: wrap;
     }
-    .block {
-        width: 200px;
-        height: 200px;
-        margin-bottom: 15px;
-    }
+   
     .prof-title {
         text-align: center;
         color:black;
@@ -389,6 +412,18 @@
         background-color: rgba(46, 45, 45, 0.692);
         padding-top: 10px;
         padding-bottom: 10px;
+    }
+    .block {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+     .block img {
+        width: 300px;
+       /*  height: 400px; */
     }
     
     .modal-content {
@@ -487,6 +522,12 @@
             display: block;
         }
     }
+    @media (max-width: 885px) {
+        .foto {
+           width: 600px;
+           height: 300px;
+        }
+    }
     
     @media (max-width: 768px) {
         .info-text {
@@ -526,11 +567,26 @@
             width: 300px;
             height: 200px;
         }
+        .foto {
+            width: 495px;
+            height: 250px;
+        }
     }
     
+     @media (max-width: 595px) {
+        .foto {
+            width: 395px;
+            height: 200px;
+        }
+     }
+
     @media (max-width: 480px) {
         .nav-tel {
             display: none;
+        }
+        .foto {
+            width: 300px;
+            height: 150px;
         }
         .deure {
             display: block;
@@ -592,8 +648,8 @@
     
     @media (max-width: 380px) {
         .foto {
-            width: 185px;
-            height: 260px;
+            width: 215px;
+            height: 111px;
             margin: 0;
             margin-bottom: 15px;
         }
