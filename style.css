@@ -707,6 +707,8 @@
        .table {
             font-size: 10px;
         }
+       .block img {
+          width: 200px; 
     }
     @media (max-width: 350px) {
 .main-title h1 {
