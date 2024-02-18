@@ -126,17 +126,18 @@
         font-size: 1.1rem;
         text-align: left;
         background-color: #fff;
-        padding: 20px;
-        padding-top: 0;
+        padding: 0 20px;
+        /* padding-top: 0;
+        padding-bottom: 0; */
         border: 2px solid #fff;
         border-radius: 8px;
         color: black;
-        margin-bottom: 15px;
+        margin-bottom: 0;
     }
-    .info-text p {
+    /* .info-text p {
         margin-top: 20px;
         margin-bottom: 1rem;
-    }
+    } */
     .info-tel {
         color: #000000;
         font-weight: 700;
@@ -541,20 +542,20 @@
     @media (max-width: 885px) {
         .foto {
            width: 600px;
-           height: 250px;
+           height: 275px;
         }
     }
     
     @media (max-width: 768px) {
         .info-text {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            display: block;
             margin-top: 10px;
-            font-size: 0.9rem;
+            font-size: 16px;
+            margin-bottom: 0;
+            padding-bottom: 0;
         }
-        .info-text p a {
-            font-size: 1rem;
+        .info-text .text {
+            margin-bottom: 0;
         }
         .services-block {
             padding-bottom: 20px;
@@ -584,15 +585,15 @@
             height: 200px;
         }
         .foto {
-            width: 495px;
-            height: 207px;
+            width: 600px;
+            height: 275px;
         }
     }
     
      @media (max-width: 595px) {
         .foto {
-            width: 395px;
-            height: 175px;
+            width: 505px;
+            height: 235px;
         }
      }
 
@@ -601,8 +602,8 @@
             display: none;
         }
         .foto {
-            width: 300px;
-            height: 130px;
+           width: 385px;
+           height: 181px;
         }
         .deure {
             display: block;
@@ -664,10 +665,9 @@
     
     @media (max-width: 380px) {
         .foto {
-            width: 215px;
-            height: 95px;
+            width: 255px;
+            height: 120px;
             margin: 0;
-            margin-bottom: 15px;
         }
        .logo {
             width: 67px;
@@ -675,6 +675,9 @@
         }
         .logo-text h5 {
             font-size: 14px;
+        }
+        .info-wrap p {
+            font-size: 15px;
         }
         .main-text-about {
             display: none;
@@ -727,14 +730,9 @@
         }
     }
     @media (max-width: 350px) {
-.foto {
-    width: 235px;
-    height: 110px;
-    margin-bottom: 0;
-}
 .services-title {
-    margin-bottom: 17px;
-    margin-top: 15px;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 .info-text {
     display: block;
@@ -743,6 +741,7 @@
 }
 .info-wrap {
     padding-top: 0;
+    font-style: 15px;
 }
 .advantage-block-title {
     font-size: 0.9rem;
