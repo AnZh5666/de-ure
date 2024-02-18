@@ -33,10 +33,13 @@
         overflow: hidden;
         z-index: 2;
         width: auto;
+        background: linear-gradient(#616161 0%, #333 10%, #222);
         padding-left: 10px;
         padding-right: 10px;
         padding-bottom: 0px;
-        border-radius: 6px;
+        border-radius: 8px;
+        
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
     }
     .nav-tel {
         color: #dfdddd;
@@ -59,22 +62,39 @@
         flex-grow: 0;
     }
     
-    .nav-item {
+    .nav-item {       
         margin-left: 25px;
         border-bottom: 2px solid;
         transition: 0.4s ease;
+        opacity: 0.7;
+        transition: 0.5s;
+        cursor: pointer;
     }
-    
+    .nav-item .active {
+       opacity: 5;
+       color: #ffffff;
+         filter: drop-shadow(0 0 10px #f7f7f7) drop-shadow(0 0 20px #f7f6f6);
+          border-bottom: 2px solid rgb(231, 231, 231);
+    }
     .nav-item:hover {
-        border-bottom: 2px solid white;
+         color: #fff;
+        border-bottom: 2px solid rgb(216, 216, 216);
+        opacity: 2;
+       /*  filter: drop-shadow(0 0 10px #cfcfcf) drop-shadow(0 0 20px #cecece); */
+    }
+    .nav-item:active {
+        opacity: 5;
+         color: #fff;
     }
     .main {
+        background: #fff;
         position: relative;
         top: 95px;
         z-index: 1;
+        border-radius: 8px;
     }
     .main-wrap {
-        background-color: rgba(255, 255, 255, 0.925);
+       
         font-family: 'Merriweather', serif;
         padding-top: 6px;
         margin-top: 6px;
@@ -87,11 +107,20 @@
     .main-title h1 {
         font-weight: bold;
     }
+    .main-foto {
+        background: #fff;
+        border-radius: 6px;
+        margin-top: 10px;
+    }
     .info-wrap {
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
+         background: #fff;
+         padding-top: 15px;
+         border-radius: 6px;
+         margin-bottom: 15px;
     }
     .info-text {
         font-family: 'Merriweather', serif;
@@ -103,6 +132,7 @@
         border: 2px solid #fff;
         border-radius: 8px;
         color: black;
+        margin-bottom: 15px;
     }
     .info-text p {
         margin-top: 20px;
@@ -124,7 +154,7 @@
         background-color: #e7e7e7;
         border-radius: 7px;
         cursor: pointer;
-        margin-bottom: 50px;
+        margin-bottom: 20px;
         border: none;
         margin-top: 15px;
         font-weight: bold;
@@ -268,22 +298,7 @@
         text-shadow: 0 0 3px #ffffff, 0 0 5px #f5f3ef;
         font-size: 18px;
     }    
-   /*  #btn-top {
-        display: none;
-        position: fixed;
-        right: 30px;
-        bottom: 120px;
-        cursor: pointer;
-        background-color: black;
-        border-radius: 30%;
-        padding: 5px;
-        animation: scale 2.5s linear infinite;
-    } */
-    
-    /* .uparrow {
-        width: 50px;
-        height: 50px;
-    } */    
+   
     footer {
         padding: 20px;
         margin-top: 15px;
@@ -324,26 +339,23 @@
     .telegram {
         margin-right: 20px;
     }
-    /* .contact-icon {
-        transform: translateY(5px);
-    } */
-    
+       
     .contact-link {
         margin-bottom: 7px;
         font-size: 12px;
     }
-    
-    /* .phone {
-        margin-left: -50px;
-    } */
-    
-    /* .social-link {
-        margin-top: 15px;
+    .social-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-    
-    .social-link a {
-        margin-right: 10px;
-    } */
+    .social-link p {
+        margin-right: 15px;
+    }
+    .social-link p img {
+        width: 30px;
+        height: 30px;
+    }
     .adminlow,
     .criminal,
     .main-civil,
@@ -367,6 +379,9 @@
         justify-content: space-between;
         flex-wrap: wrap;
         flex-direction: column;
+    }
+    .block-about ul {
+        list-style: circle;
     }
    
     .prof-title {
@@ -403,12 +418,6 @@
         color: black;
     }
     
-    .arrow-back {
-        color: rgb(53, 39, 82);
-        font-size: 16px;
-        text-decoration: none;
-        cursor: pointer;
-    }
     
     .footer-prof {
         background-color: rgba(46, 45, 45, 0.692);
@@ -424,10 +433,11 @@
         margin-bottom: 20px;
     }
      .block img {
-        width: 300px;
-       /*  height: 400px; */
+        width: 300px;       
     }
-    
+    .block-about {
+        margin-top: 12px;
+    }
     .modal-content {
         background-color: #fff;
         color:#000000;
@@ -523,11 +533,16 @@
         .navbar-text {
             display: block;
         }
+        .foto {
+            width: 668px;
+            height: 300px;
+        }
     }
+    
     @media (max-width: 885px) {
         .foto {
            width: 600px;
-           height: 300px;
+           height: 250px;
         }
     }
     
@@ -571,14 +586,14 @@
         }
         .foto {
             width: 495px;
-            height: 250px;
+            height: 207px;
         }
     }
     
      @media (max-width: 595px) {
         .foto {
             width: 395px;
-            height: 200px;
+            height: 175px;
         }
      }
 
@@ -588,7 +603,7 @@
         }
         .foto {
             width: 300px;
-            height: 150px;
+            height: 130px;
         }
         .deure {
             display: block;
@@ -651,7 +666,7 @@
     @media (max-width: 380px) {
         .foto {
             width: 215px;
-            height: 111px;
+            height: 95px;
             margin: 0;
             margin-bottom: 15px;
         }
@@ -707,8 +722,6 @@
        .table {
             font-size: 10px;
         }
-       .block img {
-          width: 200px; 
     }
     @media (max-width: 350px) {
 .main-title h1 {
@@ -732,4 +745,5 @@
 .prof-text-min {
     text-align: left;
 }
+
      }

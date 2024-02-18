@@ -7,7 +7,7 @@ require 'PHPMailer/SMTP.php';
 $name = $_POST['name'];
 $email = $_POST['email'];
 $phone  = $_POST['phone'];
-$message = $_POST['message'];
+ 
 
 // Формирование самого письма
 $title = "Новый клиент";
@@ -16,7 +16,7 @@ $body = "
 <b>Имя:</b> $name<br>
 <b>Телефон:</b> $phone<br> 
 <b>Почта:</b> $email<br><br>
-<b>Сообщение:</b><br>$message
+ 
 ";
 
 // Настройки PHPMailer
