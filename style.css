@@ -108,8 +108,7 @@
         font-weight: bold;
     }
     .main-foto {
-        background: #fff;
-        border-radius: 6px;
+        
         margin-top: 10px;
     }
     .info-wrap {
@@ -151,7 +150,7 @@
     .feedback {
         padding: 13px;
         font-size: 14px;
-        background-color: #e7e7e7;
+        background-color: #68b1f5;
         border-radius: 7px;
         cursor: pointer;
         margin-bottom: 20px;
@@ -441,7 +440,6 @@
     .modal-content {
         background-color: #fff;
         color:#000000;
-        border-radius: 17px;
     }
     
     .form__body {
@@ -516,7 +514,7 @@
     }
     
     .btn__form {
-        background-color: #e7e7e7;
+        background-color: #48ca74;
         border: 1px solid #6d6d6d;
         color: black;
         font-weight: bold;
@@ -684,9 +682,7 @@
         .text {
             font-size: 16px;
         }
-        .services-title {
-            font-size: 1rem;
-        }
+        
         .advantage-block-title {
             font-size: 1rem;
         }
@@ -723,13 +719,30 @@
        .table {
             font-size: 10px;
         }
-       .block img {
-          width: 200px;
+        .block img {
+            width: 200px;
+        }
+        .scale .btn {
+            animation: none;
+        }
     }
     @media (max-width: 350px) {
-.main-title h1 {
-    font-weight: bold;
-    font-size: 22px;
+.foto {
+    width: 235px;
+    height: 110px;
+    margin-bottom: 0;
+}
+.services-title {
+    margin-bottom: 17px;
+    margin-top: 15px;
+}
+.info-text {
+    display: block;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+.info-wrap {
+    padding-top: 0;
 }
 .advantage-block-title {
     font-size: 0.9rem;
